@@ -12,6 +12,9 @@ const productsDOM = document.querySelector(".products-center");
 // cart
 let cart = [];
 
+//buttons
+let buttonsDOM = [];
+
 // getting the products
 class Products {
     async getProducts(){
@@ -56,6 +59,7 @@ class UI {
     }
     getBagButtons() {
         const buttons = [...document.querySelectorAll(".bag-btn")];
+        buttonsDOM = buttons;
         buttons.forEach(button => {
             let id = button.dataset.id;
             let inCart = cart.find(item => item.id === id);
