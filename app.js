@@ -54,6 +54,9 @@ class UI {
         });
         productsDOM.innerHTML = result;
     }
+    getBagButtons() {
+        const btns = [...document.querySelectorAll(".bag-btn")];
+    }
 }
 
 // local storage
@@ -71,5 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
     products.getProducts().then(products => {
         ui.displayProducts(products);
         Storage.saveProducts(products);
-    });       
+    }).then(() => {
+
+    };       
 });
