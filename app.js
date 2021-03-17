@@ -77,10 +77,18 @@ class UI {
                     cart = [...cart, cartItem];
                     // save cart in local storage
                     Storage.saveCart(cart);
-                    // set cart values 
+                    // set cart values
+                    this.setCartValues(cart); 
                     // display cart item 
                     // show the cart
                 });
+            
+        })
+    }
+    setCartValue(cart) {
+        let tempTotal = 0;
+        let itemsTotal = 0;
+        cart.map(item => {
             
         })
     }
