@@ -66,18 +66,19 @@ class UI {
             if(inCart) {
                 button.innerText = "In Cart";
                 button.disabled = true
-        
+            }    
                 button.addEventListener('click',(event) => {
                     event.target.innerText = "In Cart";
                     event.target.disabled = true;
                     // get product from products
+                    let cartItem = Storage.getProduct(id)
                     // add product to the cart
                     // save cart in local storage
                     // set cart values 
                     // display cart item 
                     // show the cart
                 });
-            }
+            
         })
     }
 }
@@ -86,6 +87,7 @@ class UI {
 class Storage {
     static saveProducts(products) {
         localStorage.setItem("products", JSON.stringify(products));
+        return products
     }
 }
 
