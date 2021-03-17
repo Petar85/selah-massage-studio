@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
     products.getProducts().then(products => {
         ui.displayProducts(products);
         Storage.saveProducts(products);
-    }).then(() => {
-
-    };       
+}).then(() => {
+    ui.getBagButtons();
 });
+});     
