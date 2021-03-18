@@ -96,6 +96,9 @@ class UI {
         cartTotal.innerText = parseFloat(tempTotal.toFixed(2));
         cartItems.innerText = itemsTotal;
     }
+    addCartItem(item){
+        const div = document.createElement('div');
+        div.classList.add('cart-item');
 }
 
 // local storage
