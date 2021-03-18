@@ -80,6 +80,7 @@ class UI {
                     // set cart values
                     this.setCartValues(cart); 
                     // display cart item 
+                    this.addCartItem(cartItem);
                     // show the cart
                 });
             
