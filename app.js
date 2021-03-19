@@ -119,6 +119,7 @@ class UI {
     }
     setupAPP() {
         cart = Storage.getCart();
+        this.setCartValues(cart);
     }
 }
 // local storage
