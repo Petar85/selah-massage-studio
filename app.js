@@ -92,7 +92,7 @@ class UI {
         cart.map(item => {
             tempTotal += item.price * item.amount;
             itemsTotal += item.amount
-        })
+        });
         cartTotal.innerText = parseFloat(tempTotal.toFixed(2));
         cartItems.innerText = itemsTotal;
     }
@@ -142,6 +142,7 @@ class UI {
         let cartItems = cart.map(item => item.id);
         cartItems.forEach(id => this.removeItem(id))
     }
+}    
 
 // local storage
 class Storage {
