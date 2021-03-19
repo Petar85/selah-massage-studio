@@ -145,6 +145,7 @@ class UI {
     removeItem(id) {
         cart = cart.filter(item => item.id !==id);
         this.setCartValues(cart);
+        Storage.saveCart(cart);
     }
 }    
 
