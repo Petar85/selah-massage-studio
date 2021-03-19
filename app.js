@@ -136,11 +136,13 @@ class UI {
         clearCartBtn.addEventListener("click", () => {
             this.clearCart();
     });
+    // cart functionality
+    }
     clearCart() {
         let cartItems = cart.map(item => item.id);
         cartItems.forEach(id => this.removeItem(id))
     }
-}
+
 // local storage
 class Storage {
     static saveProducts(products) {
