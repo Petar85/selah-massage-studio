@@ -123,7 +123,7 @@ class UI {
         this.populate(cart);
     }
     populateCart(cart) {
-        cart.forEach
+        cart.forEach(item => this.addCartItem(item))
     }
 }
 // local storage
