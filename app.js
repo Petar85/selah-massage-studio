@@ -125,14 +125,14 @@ class UI {
         cart = Storage.getCart();
         this.setCartValues(cart);
         this.populateCart(cart);
-        cartBtn.addEventListener('click', this.showCart);
-        closeCartBtn.addEventListener('click', this.hideCart);
+        cartBtn.addEventListener("click", this.showCart);
+        closeCartBtn.addEventListener("click", this.hideCart);
     }
     populateCart(cart) {
         cart.forEach(item => this.addCartItem(item))
     }
     cartLogic() {
-        
+        clearCartBtn.addEventListener("click")
     }
 }
 // local storage
