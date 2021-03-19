@@ -127,6 +127,9 @@ class Storage {
         let products = JSON.parse(localStorage.getItem('products'));
         return products.find(product => product.id === id);
     }
+    static saveCart(cart) {
+        localStorage.setItem('cart',JSON.stringify(cart))
+    }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
