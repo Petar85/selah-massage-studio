@@ -132,7 +132,10 @@ class UI {
         cart.forEach(item => this.addCartItem(item))
     }
     cartLogic() {
-        clearCartBtn.addEventListener("click")
+        clearCartBtn.addEventListener("click", this.clearCart);
+    }
+    clearCart() {
+        console.log(this);
     }
 }
 // local storage
