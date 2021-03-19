@@ -121,6 +121,8 @@ class UI {
         cart = Storage.getCart();
         this.setCartValues(cart);
         this.populate(cart);
+        cartBtn.addEventListener('click', this.showCart);
+        
     }
     populateCart(cart) {
         cart.forEach(item => this.addCartItem(item))
