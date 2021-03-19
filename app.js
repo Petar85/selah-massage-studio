@@ -71,8 +71,7 @@ class UI {
                     event.target.innerText = "In Cart";
                     event.target.disabled = true;
                     // get product from products
-                    let cartItem = {...Storage.getProduct(id), 
-                        amount: 1 };
+                    let cartItem = { ...Storage.getProduct(id), amount: 1 };
                     // add product to the cart
                     cart = [...cart, cartItem];
                     // save cart in local storage
@@ -82,10 +81,10 @@ class UI {
                     // display cart item 
                     this.addCartItem(cartItem);
                     // show the cart
+                    this.showCart()
                 });
-            
-        })
-    }
+            });
+        }
     setCartValue(cart) {
         let tempTotal = 0;
         let itemsTotal = 0;
@@ -111,8 +110,13 @@ class UI {
             <i class="fas fa-chevron-down data-id=${item.id}"></i>
         </div>`;
         cartContent.appendChild(div);
+        
+    }
+    // showCart() {
+    //     cartOverlay.classList.add("transparentBcg");
+    //     cartDOM.classList.add("showCart");
+    // }
 }
-
 // local storage
 class Storage {
     static saveProducts(products) {
