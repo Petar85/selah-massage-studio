@@ -86,7 +86,7 @@ class UI {
                 });
             });
         }
-    setCartValue(cart) {
+    setCartValues(cart) {
         let tempTotal = 0;
         let itemsTotal = 0;
         cart.map(item => {
