@@ -118,7 +118,7 @@ class UI {
         cartDOM.classList.add("showCart");
     }
     setupAPP() {
-
+        cart = Storage.getCart();
     }
 }
 // local storage
