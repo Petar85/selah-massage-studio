@@ -132,8 +132,10 @@ class UI {
         cart.forEach(item => this.addCartItem(item))
     }
     cartLogic() {
-        clearCartBtn.addEventListener("click", this.clearCart);
-    }
+        // clear cart btn
+        clearCartBtn.addEventListener("click", () => {
+            this.clearCart();
+    });
     clearCart() {
         let cartItems = cart.map(item => item.id);
         cartItems.forEach(id => this.removeItem(id))
