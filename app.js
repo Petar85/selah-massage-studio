@@ -113,6 +113,10 @@ class UI {
         cartContent.appendChild(div);
         
     }
+    hideCart() {
+        cartOverlay.classList.remove("transparentBcg");
+        cartDOM.classList.remove("showCart");
+    }
     showCart() {
         cartOverlay.classList.add("transparentBcg");
         cartDOM.classList.add("showCart");
@@ -122,14 +126,13 @@ class UI {
         this.setCartValues(cart);
         this.populateCart(cart);
         cartBtn.addEventListener('click', this.showCart);
-        closeCartBtn.addEventListener('click',this.hideCart);
+        closeCartBtn.addEventListener('click', this.hideCart);
     }
     populateCart(cart) {
         cart.forEach(item => this.addCartItem(item))
     }
-    hideCart() {
-        cartOverlay.classList.remove("transparentBcg");
-        cartDOM.classList.remove("showCart");
+    cartLogic() {
+        
     }
 }
 // local storage
@@ -161,5 +164,6 @@ document.addEventListener("DOMContentLoaded", () => {
         Storage.saveProducts(products);
 }).then(() => {
     ui.getBagButtons();
+    ui.cartLogic();
 });
 });     
