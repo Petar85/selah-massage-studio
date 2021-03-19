@@ -113,10 +113,13 @@ class UI {
         cartContent.appendChild(div);
         
     }
-    // showCart() {
-    //     cartOverlay.classList.add("transparentBcg");
-    //     cartDOM.classList.add("showCart");
-    // }
+    showCart() {
+        cartOverlay.classList.add("transparentBcg");
+        cartDOM.classList.add("showCart");
+    }
+    setupAPP() {
+        
+    }
 }
 // local storage
 class Storage {
@@ -135,7 +138,9 @@ class Storage {
 document.addEventListener("DOMContentLoaded", () => {
     const ui = new UI();
     const products = new Products();
-    
+
+    // set up app
+    ui.setupAPP();
     // get all products
     products.getProducts().then(products => {
         ui.displayProducts(products);
