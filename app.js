@@ -120,7 +120,7 @@ class UI {
     setupAPP() {
         cart = Storage.getCart();
         this.setCartValues(cart);
-        this.populate(cart);
+        this.populateCart(cart);
         cartBtn.addEventListener('click', this.showCart);
         closeCartBtn.addEventListener('click',this.hideCart);
     }
