@@ -136,6 +136,7 @@ class UI {
     }
     clearCart() {
         let cartItems = cart.map(item => item.id);
+        cartItems.forEach(id => this.removeItem(id))
     }
 }
 // local storage
