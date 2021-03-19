@@ -135,7 +135,7 @@ class UI {
         clearCartBtn.addEventListener("click", this.clearCart);
     }
     clearCart() {
-        console.log(this);
+        let cartItems = cart.map(item => item.id);
     }
 }
 // local storage
