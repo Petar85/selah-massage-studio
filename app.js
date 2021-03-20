@@ -47,7 +47,7 @@ class UI {
                     class="product-img">
                     <button class="bag-btn" data-id=${product.id}>
                         <i class="fas fa-shopping-cart"></i>
-                        add to bag
+                        add to cart
                     </button>
                 </div>
                 <h3>${product.title}</h3>
@@ -74,7 +74,6 @@ class UI {
                     let cartItem = { ...Storage.getProduct(id), amount: 1 };
                     // add product to the cart
                     cart = [...cart, cartItem];
-                    console.log(cart);
                     // save cart in local storage
                     Storage.saveCart(cart);
                     // set cart values
