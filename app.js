@@ -112,23 +112,24 @@ class UI {
         cartContent.appendChild(div);
         
     }
+
+    showCart() {
+    cartOverlay.classList.add("transparentBcg");
+    cartDOM.classList.add("showCart");
+    }
+    setupAPP() {
+    cart = Storage.getCart();
+    this.setCartValues(cart);
+    this.populateCart(cart);
+    cartBtn.addEventListener("click", this.showCart);
+    closeCartBtn.addEventListener("click", this.hideCart);
+    }
+    populateCart(cart) {
+    cart.forEach(item => this.addCartItem(item))
+    }
     hideCart() {
         cartOverlay.classList.remove("transparentBcg");
         cartDOM.classList.remove("showCart");
-    }
-    showCart() {
-        cartOverlay.classList.add("transparentBcg");
-        cartDOM.classList.add("showCart");
-    }
-    setupAPP() {
-        cart = Storage.getCart();
-        this.setCartValues(cart);
-        this.populateCart(cart);
-        cartBtn.addEventListener("click", this.showCart);
-        closeCartBtn.addEventListener("click", this.hideCart);
-    }
-    populateCart(cart) {
-        cart.forEach(item => this.addCartItem(item))
     }
     cartLogic() {
         // clear cart btn
@@ -153,10 +154,10 @@ class UI {
         button.disabled = false;
         button.innerHTML = `<i class="fas fa-shopping-cart"></i>add to cart`;
     }
-    getSingleButton(id) {
-        return buttonsDOM.find(button => button.dataset.id === id);
-    }
-}    
+    // getSingleButton(id); {
+    //     return buttonsDOM.find(button => button.dataset.id === id);
+    // }
+}   
 
 // local storage
 class Storage {
